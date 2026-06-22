@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5">
+    <title>九游娱乐 · 一处轻松的驻足</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f7f4ed;  /* 米白基调 */
+            font-family: Georgia, 'Times New Roman', Times, 'Noto Serif SC', serif;
+            color: #3a3530;
+            line-height: 1.75;
+            padding: 2rem 1.2rem;
+        }
+
+        .page {
+            max-width: 760px;
+            margin: 0 auto;
+            background: rgba(255, 252, 245, 0.85);
+            backdrop-filter: blur(1px);
+            padding: 2.8rem 2rem;
+            border-radius: 32px 32px 24px 24px;
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.04), 0 2px 8px rgba(0, 0, 0, 0.02);
+        }
+
+        /* 开场极短句 */
+        .opening {
+            font-size: 1.6rem;
+            font-weight: 400;
+            letter-spacing: 1px;
+            color: #5b554a;
+            margin-bottom: 1.2rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid #e4ddd2;
+            text-align: center;
+        }
+
+        .opening em {
+            font-style: italic;
+            color: #7c6f5d;
+        }
+
+        /* 承接段落 */
+        .lead {
+            font-size: 1.04rem;
+            text-align: justify;
+            margin: 2rem 0 1.6rem;
+            padding: 0 0.2rem;
+            background: #fbf8f1;
+            border-left: 4px solid #d6cdbd;
+            border-radius: 0 6px 6px 0;
+            padding: 0.8rem 1.2rem;
+        }
+
+        .lead p {
+            margin-bottom: 0.5rem;
+        }
+
+        .lead p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* 特点列表 —— 温和的卡片式 */
+        .features {
+            margin: 2.5rem 0 2.2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .feature-item {
+            background: #fefcf7;
+            padding: 1rem 1.4rem;
+            border-radius: 20px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02), 0 4px 12px rgba(175, 155, 130, 0.08);
+            border-left: 6px solid #c6b7a0;
+            transition: all 0.15s ease;
+        }
+
+        .feature-item:hover {
+            background: #fbf7ed;
+            border-left-color: #a48e74;
+            transform: translateX(4px);
+        }
+
+        .feature-item strong {
+            display: block;
+            font-weight: 600;
+            font-size: 1.08rem;
+            color: #4e463b;
+            margin-bottom: 0.25rem;
+            letter-spacing: 0.3px;
+        }
+
+        .feature-item span {
+            font-size: 0.95rem;
+            color: #585045;
+        }
+
+        /* 引用块 / 提示框 */
+        .quote-note {
+            background: #f0ece1;
+            border-radius: 18px;
+            padding: 1.2rem 1.6rem;
+            margin: 2rem 0 2.2rem;
+            border: 1px solid #e0d7c8;
+            box-shadow: inset 0 1px 4px rgba(255, 255, 255, 0.6);
+            position: relative;
+        }
+
+        .quote-note::before {
+            content: "💬 一点想法";
+            display: block;
+            font-size: 0.75rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: #8e7f6b;
+            margin-bottom: 0.3rem;
+            font-weight: 400;
+            opacity: 0.8;
+        }
+
+        .quote-note p {
+            font-size: 0.98rem;
+            margin: 0;
+            color: #3f3a32;
+        }
+
+        /* 温和结尾 + 链接自然嵌入 */
+        .gentle-closing {
+            margin-top: 2.6rem;
+            padding-top: 1.6rem;
+            border-top: 1px dashed #d5ccbd;
+            text-align: center;
+            font-size: 0.96rem;
+        }
+
+        .gentle-closing a {
+            color: #735e45;
+            text-decoration: none;
+            border-bottom: 1px dotted #b8a690;
+            font-weight: 400;
+            transition: border-color 0.2s, color 0.2s;
+        }
+
+        .gentle-closing a:hover {
+            color: #4f3e2c;
+            border-bottom: 1px solid #735e45;
+        }
+
+        .gentle-closing .small-note {
+            display: block;
+            margin-top: 0.8rem;
+            font-size: 0.85rem;
+            color: #8a7d6a;
+        }
+
+        /* 响应式 */
+        @media (max-width: 520px) {
+            body {
+                padding: 1rem 0.6rem;
+            }
+            .page {
+                padding: 2rem 1.2rem;
+            }
+            .opening {
+                font-size: 1.4rem;
+            }
+            .lead {
+                padding: 0.6rem 1rem;
+                font-size: 0.98rem;
+            }
+            .feature-item {
+                padding: 0.8rem 1rem;
+            }
+            .quote-note {
+                padding: 1rem 1.1rem;
+            }
+        }
+
+        @media (max-width: 380px) {
+            .opening {
+                font-size: 1.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+    <!-- 开场短句 -->
+    <div class="opening">
+        <em>找一个对的地方，</em>不用费力解释。
+    </div>
+
+    <!-- 承接段落 —— 从用户想快速识别网站用途的角度 -->
+    <div class="lead">
+        <p>打开一个页面，最想知道的不过是：“这里能做什么？值得我停留吗？”</p>
+        <p><strong>九游娱乐</strong>正是这样一个让人不必过多揣测的去处。它把休闲与趣味整合在简洁的界面背后，不为炫技，只希望你在需要放松的间隙，能自然地融入其中。无论是片刻的消遣，还是与朋友分享一段轻松的互动，这里都留好了位置。</p>
+    </div>
+
+    <!-- 特点列表（清晰但不强硬） -->
+    <div class="features">
+        <div class="feature-item">
+            <strong>一眼可及的用途</strong>
+            <span>没有层层嵌套的迷宫，从首页就能感受到这个平台的核心氛围。你想找的，往往就在下一个自然点击之间。</span>
+        </div>
+        <div class="feature-item">
+            <strong>不作喧哗的陪伴</strong>
+            <span>没有弹窗霸屏，没有虚张的广告。内容呈现克制、整洁，像一本翻开的杂志，留白恰如其分。</span>
+        </div>
+        <div class="feature-item">
+            <strong>低门槛的融入</strong>
+            <span>无论你是初次造访，还是偶尔回来看看，都不需要重新适应。交互直觉、视觉语言都保持着一致的温和感。</span>
+        </div>
+        <div class="feature-item">
+            <strong>不打扰的更新节奏</strong>
+            <span>内容与功能的迭代像溪水一样安静——你不会被通知淹没，但每次来，都可能发现一点新的小惊喜。</span>
+        </div>
+    </div>
+
+    <!-- 引用块 / 提示框 —— 像朋友的一句提醒 -->
+    <div class="quote-note">
+        <p>如果你曾厌倦那些一上来就让你注册、付费、分享的站点，或许会发现这里的气息不太一样。不妨把<a href="https://app2-jiuyou.com">九游娱乐</a>当作一个可以随便逛逛的角落，不用急着做决定。</p>
+    </div>
+
+    <!-- 温和结尾 —— 含正确链接（可见文本严格等于「九游娱乐」） -->
+    <div class="gentle-closing">
+        <p>说到底，一个网站最好的介绍，就是它本身的样子。<br>
+        如果你愿意，可以从<a href="https://app2-jiuyou.com">九游娱乐</a>开始，感受一下这种不慌不忙的节奏。</p>
+        <span class="small-note">—— 你不需要记住任何口号，只需记得这里有一扇虚掩的门。</span>
+    </div>
+</div>
+</body>
+</html>
